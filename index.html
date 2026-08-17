@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KabadConnect - Delhi's Recycling Heroes</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="nav-bar">
+    <div class="nav-logo">
+      <i data-lucide="recycle" class="text-green"></i> KabadConnect
+    </div>
+    <div class="nav-links">
+      <a href="#how-it-works">How It Works</a>
+      <a href="#features">Features</a>
+      <a href="#impact">Impact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-section">
+    <div class="hero-bg-dots"></div>
+    <div class="hero-glow"></div>
+    <div class="container hero-content animate-on-scroll">
+      <h1 class="hero-title">Connecting Every Home to Delhi's Recycling Heroes</h1>
+      <p class="hero-subtitle">AI-powered waste classification meets India's largest informal recycling network. Built for SWM Rules 2026.</p>
+      <div class="flex flex-center gap-2 mt-4">
+        <button class="btn btn-primary">Get Started</button>
+        <button class="btn btn-secondary">View Dashboard</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Impact Stats Bar -->
+  <section id="impact" class="container">
+    <div class="grid grid-4 animate-on-scroll">
+      <div class="stat-card glass-card">
+        <div class="stat-value" data-target="150000" data-suffix="+">0</div>
+        <div class="stat-label">Kabadiwalas in Delhi</div>
+      </div>
+      <div class="stat-card glass-card">
+        <div class="stat-value" data-target="11500">0</div>
+        <div class="stat-label">Tonnes/Day Waste Generated</div>
+      </div>
+      <div class="stat-card glass-card">
+        <div class="stat-value" data-target="2" data-suffix=" Cr">0</div>
+        <div class="stat-label">₹ Saved Daily</div>
+      </div>
+      <div class="stat-card glass-card">
+        <div class="stat-value" data-target="4">0</div>
+        <div class="stat-label">Waste Streams</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Choose Your Role Section -->
+  <section id="features" class="container">
+    <div class="section-header animate-on-scroll">
+      <h2 class="section-title">Choose Your Role</h2>
+      <p class="section-subtitle">Tailored experiences for every stakeholder in the ecosystem.</p>
+    </div>
+    
+    <div class="grid grid-3 animate-on-scroll">
+      <!-- Citizen -->
+      <a href="citizen.html" class="glass-card role-card">
+        <span class="role-icon">👨‍👩‍👧</span>
+        <h3 class="mt-2 mb-1">Citizen</h3>
+        <p class="text-secondary mb-3">Scan, Sort & Schedule pickups right from your home.</p>
+        <button class="btn btn-secondary">Get Started <i data-lucide="arrow-right"></i></button>
+      </a>
+
+      <!-- Kabadiwala -->
+      <a href="kabadiwala.html" class="glass-card role-card">
+        <span class="role-icon">🚲</span>
+        <h3 class="mt-2 mb-1">Kabadiwala</h3>
+        <p class="text-secondary mb-3">Jobs, Fair Rates & Digital ID to boost your daily earnings.</p>
+        <button class="btn btn-primary">Join Network <i data-lucide="arrow-right"></i></button>
+      </a>
+
+      <!-- MCD Official -->
+      <a href="mcd.html" class="glass-card role-card">
+        <span class="role-icon">🏛️</span>
+        <h3 class="mt-2 mb-1">MCD Official</h3>
+        <p class="text-secondary mb-3">Monitor, Track & Report city-wide waste metrics in real-time.</p>
+        <button class="btn btn-secondary">View Portal <i data-lucide="arrow-right"></i></button>
+      </a>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section id="how-it-works" class="container">
+    <div class="section-header animate-on-scroll">
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-subtitle">A seamless 3-step process ensuring total traceability.</p>
+    </div>
+    <div class="grid grid-3 animate-on-scroll">
+      <div class="step-card glass-card">
+        <div class="step-number">1</div>
+        <h3 class="mb-1"><i data-lucide="camera" class="text-green inline"></i> Scan</h3>
+        <p class="text-secondary">AI instantly classifies your waste type via photo.</p>
+      </div>
+      <div class="step-card glass-card">
+        <div class="step-number">2</div>
+        <h3 class="mb-1"><i data-lucide="bike" class="text-blue inline"></i> Connect</h3>
+        <p class="text-secondary">Nearest verified kabadiwala picks up the sorted waste.</p>
+      </div>
+      <div class="step-card glass-card">
+        <div class="step-number">3</div>
+        <h3 class="mb-1"><i data-lucide="bar-chart-2" class="text-yellow inline"></i> Track</h3>
+        <p class="text-secondary">MCD monitors the complete lifecycle to recycling.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4-Stream Segregation Visual -->
+  <section class="container">
+    <div class="section-header animate-on-scroll">
+      <h2 class="section-title">4-Stream SWM 2026 Segregation</h2>
+      <p class="section-subtitle">Complying with the latest guidelines for optimal recycling.</p>
+    </div>
+    
+    <div class="grid grid-4 animate-on-scroll">
+      <div class="glass-card" style="border-top: 4px solid var(--wet-waste);">
+        <h3 class="text-green mb-2">Wet Waste</h3>
+        <p class="text-secondary mb-2 text-sm">Food scraps, tea leaves, fruit peels.</p>
+        <span class="waste-tag wet">Compostable</span>
+      </div>
+      
+      <div class="glass-card" style="border-top: 4px solid var(--dry-waste);">
+        <h3 class="text-blue mb-2">Dry Waste</h3>
+        <p class="text-secondary mb-2 text-sm">Paper, plastic, metal, glass.</p>
+        <span class="waste-tag dry">Recyclable</span>
+      </div>
+      
+      <div class="glass-card" style="border-top: 4px solid var(--sanitary-waste);">
+        <h3 class="text-yellow mb-2">Sanitary</h3>
+        <p class="text-secondary mb-2 text-sm">Diapers, bandages, masks.</p>
+        <span class="waste-tag sanitary">Incineration</span>
+      </div>
+      
+      <div class="glass-card" style="border-top: 4px solid var(--special-waste);">
+        <h3 class="text-red mb-2">Special Care</h3>
+        <p class="text-secondary mb-2 text-sm">Batteries, e-waste, chemicals.</p>
+        <span class="waste-tag special">Hazardous</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SWM 2026 Compliance Banner -->
+  <div class="swm-banner animate-on-scroll">
+    <div class="container text-center">
+      <h2 class="mb-2">Built for India's Solid Waste Management Rules 2026</h2>
+      <div class="flex flex-center gap-4 mt-3">
+        <span class="text-secondary"><i data-lucide="check-circle" class="text-green inline"></i> 4-Stream Mandate</span>
+        <span class="text-secondary"><i data-lucide="check-circle" class="text-green inline"></i> Informal Sector Integration</span>
+        <span class="text-secondary"><i data-lucide="check-circle" class="text-green inline"></i> Traceability</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container text-center">
+      <h3 class="mb-2">Made for WasteChakra 2026 | IIT Delhi × MCD</h3>
+      <div class="flex flex-center gap-3 mb-3 mt-2">
+        <a href="citizen.html" class="text-muted">Citizen</a>
+        <a href="kabadiwala.html" class="text-muted">Kabadiwala</a>
+        <a href="mcd.html" class="text-muted">MCD Official</a>
+      </div>
+      <p class="text-muted text-sm mt-3">© 2026 KabadConnect. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+  <script src="js/app.js"></script>
+</body>
+</html>
